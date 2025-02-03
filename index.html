@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -16,31 +17,31 @@
     <title>포트폴리오</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav container">
         <!-- 이미지(로고) -->
-        <div>
-          <img src="./images/logo.png" alt="로고 이미지" />
-          <a href="#">고성인</a>
+        <div class="nav__logo">
+          <img class="nav__img" src="./images/logo.png" alt="로고 이미지" />
+          <a href="#" class="nav__brand">고성인</a>
         </div>
 
         <!-- 메뉴 -->
-        <div>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
             </li>
-            <li>
-              <a href="#about">About</a>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
             </li>
-            <li>
-              <a href="#skills">Skills</a>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Skills</a>
             </li>
-            <li>
-              <a href="#work">Work</a>
+            <li class="nav__item">
+              <a href="#work" class="nav__link">Work</a>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
         </div>
@@ -48,50 +49,48 @@
     </header>
     <main>
       <!-- Home -->
-      <section id="home">
+      <section class="home container section" id="home">
         <!-- Home Data -->
-        <div>
-          <h2>
+        <div class="home__data">
+          <h2 class="home__title">
             안녕하세요! <br />
-            <strong>프론트엔드 개발자</strong>
-            <strong>고성인</strong>입니다!
+            <strong class="home__title-color">프론트엔드 개발자</strong><br />
+            <strong class="home__title-color">고성인</strong>입니다!
           </h2>
 
-          <a href="#contact">Contact</a>
+          <a href="#contact" class="button">Contact</a>
 
-          <div>
+          <div class="home__social">
             <a href="https://velog.io/@jjjk0605" target="_blank" title="고성인 블로그 링크">
-              <i class="fa-brands fa-blogger-b"></i>
+              <i class="fa-brands fa-blogger-b home__social-icon"></i>
             </a>
             <a
               href="https://www.instagram.com/jjjk0605/"
               target="_blank"
               title="고성인 인스타그램 링크"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram home__social-icon"></i>
             </a>
             <a href="https://github.com/rhtjddls123" target="_blank" title="고성인 깃허브 링크">
-              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github home__social-icon"></i>
             </a>
           </div>
         </div>
 
         <!-- Home Image -->
-        <div>
-          <img src="./images/home/profile.jpg" alt="프로필 이미지" />
-        </div>
+        <img class="home__img" src="./images/home/profile.jpg" alt="프로필 이미지" />
       </section>
 
       <!-- About -->
-      <section id="about">
-        <h2>About</h2>
-
-        <div>
-          <div><img src="./images/about/about.jpg" alt="고성인 프로필" /></div>
-
-          <div>
-            <h3>저는 이렇게 답합니다</h3>
-            <p>
+      <section class="about section bg-grey-1" id="about">
+        <h2 class="section__title">About</h2>
+        <!-- 이미지 -->
+        <div class="about__container container">
+          <img class="about__img" src="./images/about/about.jpg" alt="고성인 프로필" />
+          <!-- 문자열 -->
+          <div class="about__data">
+            <h3 class="about__subtitle">저는 이렇게 답합니다</h3>
+            <p class="about__text">
               프로그래밍을 배우는 사람의 마음을 너무 잘 압니다. 저도 여러분과 똑같은 입장이었던 적이
               있기 때문입니다. 개발자로 취업 후 1년 정도 다니고 퇴사를 결심한 적이 있습니다.
               왜냐하면 프로그래밍을 잘 모르고 취업했기 때문입니다.
@@ -109,154 +108,176 @@
       </section>
 
       <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
 
-        <div>
+        <div class="skills__container container">
           <!-- 스킬 데이터 -->
           <div>
-            <h3>Profesional Skills</h3>
-            <p>
+            <h3 class="skills__subtitle">Profesional Skills</h3>
+            <p class="skills__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nulla consectetur
               dicta modi itaque rem deleniti repellat nam veniam? Cumque illum dolorem quos ipsa
               doloribus reprehenderit possimus numquam culpa aliquid?
             </p>
             <div>
-              <article>
-                <div>
+              <article class="skills__data">
+                <div class="skills__names">
                   <!-- icon -->
-                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-html5 skills__icon"></i>
                   <!-- skill name -->
-                  <span>HTML5</span>
+                  <span class="skills__name">HTML5</span>
                 </div>
                 <div>
                   <!-- percentage -->
-                  <span>85%</span>
+                  <span class="_">85%</span>
                 </div>
 
-                <progress id="html5" max="100" value="85"></progress>
+                <progress class="skills__progress" id="html5" max="100" value="85"></progress>
               </article>
 
-              <article>
-                <div>
+              <article class="skills__data">
+                <div class="skills__names">
                   <!-- icon -->
-                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-css3-alt skills__icon"></i>
                   <!-- skill name -->
-                  <span>CSS3</span>
+                  <span class="skills__name">CSS3</span>
                 </div>
                 <div>
                   <!-- percentage -->
-                  <span>80%</span>
+                  <span class="_">80%</span>
                 </div>
 
-                <progress id="css3" max="100" value="80"></progress>
+                <progress class="skills__progress" id="css3" max="100" value="80"></progress>
               </article>
 
-              <article>
-                <div>
+              <article class="skills__data">
+                <div class="skills__names">
                   <!-- icon -->
-                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-js skills__icon"></i>
                   <!-- skill name -->
-                  <span>JavaScript</span>
+                  <span class="skills__name">JavaScript</span>
                 </div>
                 <div>
                   <!-- percentage -->
-                  <span>90%</span>
+                  <span class="skills__percentage">90%</span>
                 </div>
 
-                <progress id="javascript" max="100" value="90"></progress>
+                <progress class="skills__progress" id="javascript" max="100" value="90"></progress>
               </article>
 
-              <article>
-                <div>
+              <article class="skills__data">
+                <div class="skills__names">
                   <!-- icon -->
-                  <i class="fa-solid fa-server"></i>
+                  <i class="fa-solid fa-server skills__icon"></i>
                   <!-- skill name -->
-                  <span>Back-end</span>
+                  <span class="skills__name">Back-end</span>
                 </div>
                 <div>
                   <!-- percentage -->
-                  <span>95%</span>
+                  <span class="skills__percentage">95%</span>
                 </div>
 
-                <progress id="backend" max="100" value="95"></progress>
+                <progress class="skills__progress" id="backend" max="100" value="95"></progress>
               </article>
             </div>
           </div>
 
           <!-- 이미지 -->
-          <div>
-            <img src="./images/skills/desktop.jpg" alt="데스크탑 이미지" />
-          </div>
+          <img class="skills__img" src="./images/skills/desktop.jpg" alt="데스크탑 이미지" />
         </div>
       </section>
 
       <!-- Work -->
-      <section id="work">
-        <h2>Work</h2>
-        <div>
+      <section class="work section" id="work">
+        <h2 class="section__title">Work</h2>
+        <div class="work__container container">
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/frontend-fly"
             target="_blank"
             title="프론트엔드 날개달기 강의"
           >
-            <img src="./images/work/front-end-fly.jpg" alt="프론트엔드 날개달기 강의" />
+            <img
+              class="work__img"
+              src="./images/work/front-end-fly.jpg"
+              alt="프론트엔드 날개달기 강의"
+            />
           </a>
 
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/vue-basic"
             target="_blank"
             title="Vue3 완벽 마스터 - 기본편 강의"
           >
-            <img src="./images/work/vue-3-basic.jpg" alt="Vue3 완벽 마스터 - 기본편 강의" />
+            <img
+              class="work__img"
+              src="./images/work/vue-3-basic.jpg"
+              alt="Vue3 완벽 마스터 - 기본편 강의"
+            />
           </a>
 
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/vue-practice"
             target="_blank"
             title="Vue3 완벽 마스터 - 실전편 강의"
           >
-            <img src="./images/work/vue-3-practice.jpg" alt="Vue3 완벽 마스터 - 실전편 강의" />
+            <img
+              class="work__img"
+              src="./images/work/vue-3-practice.jpg"
+              alt="Vue3 완벽 마스터 - 실전편 강의"
+            />
           </a>
 
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/quasar"
             target="_blank"
             title="퀘이사 완벽 마스터 강의"
           >
-            <img src="./images/work/quasar.jpg" alt="퀘이사 완벽 마스터 강의" />
+            <img class="work__img" src="./images/work/quasar.jpg" alt="퀘이사 완벽 마스터 강의" />
           </a>
 
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/vue-firebase"
             target="_blank"
             title="Vue3 & Firebase 커뮤니티 풀스택 강의"
           >
             <img
+              class="work__img"
               src="./images/work/vue-3-firebase.jpg"
               alt="Vue3 & Firebase 커뮤니티 풀스택 강의"
             />
           </a>
 
           <a
+            class="work__link"
             href="https://www.gymcoding.co/courses/nuxt"
             target="_blank"
             title="Vue3 끝판왕 : Nuxt3 완벽 마스터"
           >
-            <img src="./images/work/nuxt-3.jpg" alt="Vue3 끝판왕 : Nuxt3 완벽 마스터" />
+            <img
+              class="work__img"
+              src="./images/work/nuxt-3.jpg"
+              alt="Vue3 끝판왕 : Nuxt3 완벽 마스터"
+            />
           </a>
         </div>
       </section>
 
       <!-- Contact -->
-      <section id="contact">
-        <h2>Contact</h2>
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact</h2>
 
-        <div>
-          <form>
-            <input type="text" name="name" placeholder="이름" required />
-            <input type="text" name="subject" placeholder="제목" required />
+        <div class="contact__container container">
+          <form id="contactForm" class="contact__form">
+            <input class="contact__input" type="text" name="name" placeholder="이름" required />
+            <input class="contact__input" type="text" name="subject" placeholder="제목" required />
             <textarea
+              class="contact__input"
               name="message"
               id="message"
               cols="30"
@@ -264,31 +285,34 @@
               placeholder="내용"
               required
             ></textarea>
-            <button>보내기</button>
+            <button class="contact__button button">보내기</button>
           </form>
         </div>
       </section>
+      <button class="floating-button" id="floatingButton">
+        <i class="fa-solid fa-arrow-up floating-button-icon"></i>
+      </button>
     </main>
 
     <!-- Footer -->
-    <footer>
-      <p>짐코딩</p>
-      <div>
+    <footer class="footer">
+      <p class="footer__title">짐코딩</p>
+      <div class="footer__social">
         <a href="https://velog.io/@jjjk0605" target="_blank" title="고성인 블로그 링크">
-          <i class="fa-brands fa-blogger-b"></i>
+          <i class="fa-brands fa-blogger-b footer__icon"></i>
         </a>
         <a
           href="https://www.instagram.com/jjjk0605/"
           target="_blank"
           title="고성인 인스타그램 링크"
         >
-          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-instagram footer__icon"></i>
         </a>
         <a href="https://github.com/rhtjddls123" target="_blank" title="고성인 깃허브 링크">
-          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-github footer__icon"></i>
         </a>
       </div>
-      <p>Copyright &copy; 2024 짐코딩 All rights reserved.</p>
+      <p class="footer__copy">Copyright &copy; 2024 짐코딩 All rights reserved.</p>
     </footer>
   </body>
 </html>
