@@ -14,6 +14,8 @@
       referrerpolicy="no-referrer"
     />
     <script src="./js/main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
     <title>포트폴리오</title>
   </head>
   <body>
@@ -29,7 +31,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
@@ -55,11 +57,7 @@
       <section class="home container section" id="home">
         <!-- Home Data -->
         <div class="home__data">
-          <h2 class="home__title">
-            안녕하세요! <br />
-            <strong class="home__title-color">프론트엔드 개발자</strong><br />
-            <strong class="home__title-color">고성인</strong>입니다!
-          </h2>
+          <h2 id="typeit" class="home__title"></h2>
 
           <a href="#contact" class="button">Contact</a>
 
@@ -292,7 +290,7 @@
           </form>
         </div>
       </section>
-      <button class="floating-button" id="floatingButton">
+      <button class="floating-button" id="floating-button">
         <i class="fa-solid fa-arrow-up floating-button-icon"></i>
       </button>
     </main>
