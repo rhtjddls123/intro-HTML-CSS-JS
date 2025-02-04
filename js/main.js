@@ -65,3 +65,22 @@ typeit
   .delete(9, { delay: 300 })
   .type("<strong class='home__title-color'>고성인</strong>입니다!")
   .go();
+
+const $contactForm = document.getElementById("contactForm");
+
+$contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = $contactForm.name.value;
+  const subject = $contactForm.subject.value;
+  const message = $contactForm.message.value;
+  const to = "jjjk0605@naver.com";
+
+  location.href =
+    "mailto:" +
+    encodeURIComponent(to) +
+    "?subject=" +
+    encodeURIComponent(`[${name}님 문의] ${subject}`) +
+    "&body=" +
+    encodeURIComponent(message);
+});
